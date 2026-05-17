@@ -1,0 +1,112 @@
+<section
+  class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 md:py-32"
+  id="stack"
+>
+  <div class="text-center mb-16">
+    <h2 class="font-headline-md text-headline-md text-primary mb-4">
+      Technical Proficiency
+    </h2>
+    <p
+      class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto"
+    >
+      Core competencies across software development, cloud architecture, and robotics.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    <!-- Languages -->
+    <div
+      class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_4px_20px_rgba(26,54,93,0.05)] hover:shadow-[0_8px_30px_rgba(26,54,93,0.1)] transition-shadow border border-transparent hover:border-secondary"
+    >
+      <div class="flex items-center gap-3 mb-6">
+        <span class="material-symbols-outlined text-secondary text-2xl"
+          >code</span
+        >
+        <h3
+          class="font-label-sm text-label-sm uppercase tracking-widest text-primary"
+        >
+          Languages
+        </h3>
+      </div>
+      <div class="flex flex-col gap-4">
+        @for (skill of languages; track skill.name) {
+          <div>
+            <div
+              class="flex justify-between font-label-sm text-label-sm mb-1 text-on-surface"
+            >
+              <span>{{ skill.name }}</span>
+            </div>
+            <div
+              class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden"
+            >
+              <div
+                class="bar-fill h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+                [style]="'--bar-width:' + skill.level + '%'"
+              ></div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Cloud & DevOps -->
+    <div
+      class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_4px_20px_rgba(26,54,93,0.05)] hover:shadow-[0_8px_30px_rgba(26,54,93,0.1)] transition-shadow border border-transparent hover:border-secondary"
+    >
+      <div class="flex items-center gap-3 mb-6">
+        <span class="material-symbols-outlined text-secondary text-2xl"
+          >cloud</span
+        >
+        <h3
+          class="font-label-sm text-label-sm uppercase tracking-widest text-primary"
+        >
+          Cloud &amp; DevOps
+        </h3>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        @for (tag of cloudTags; track tag.name) {
+          <span
+            class="px-3 py-1 bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full"
+          >
+            {{ tag.name }}
+          </span>
+        }
+      </div>
+    </div>
+
+    <!-- Web & Databases -->
+    <div
+      class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_4px_20px_rgba(26,54,93,0.05)] hover:shadow-[0_8px_30px_rgba(26,54,93,0.1)] transition-shadow border border-transparent hover:border-secondary"
+    >
+      <div class="flex items-center gap-3 mb-6">
+        <span class="material-symbols-outlined text-secondary text-2xl"
+          >database</span
+        >
+        <h3
+          class="font-label-sm text-label-sm uppercase tracking-widest text-primary"
+        >
+          Web, Mobile &amp; Databases
+        </h3>
+      </div>
+      <div class="flex flex-col gap-4">
+        @for (skill of webAndDb; track skill.name) {
+          <div>
+            <div
+              class="flex justify-between font-label-sm text-label-sm mb-1 text-on-surface"
+            >
+              <span>{{ skill.name }}</span>
+            </div>
+            <div
+              class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden"
+            >
+              <div
+                class="bar-fill h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+                [style]="'--bar-width:' + skill.level + '%'"
+              ></div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

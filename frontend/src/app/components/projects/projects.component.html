@@ -1,0 +1,85 @@
+<section class="bg-surface-container-lowest py-20 md:py-32" id="projects">
+  <div
+    class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
+  >
+    <h2 class="font-headline-md text-headline-md text-primary mb-4">
+      Projects &amp; Experience
+    </h2>
+    <p class="font-body-md text-body-md text-on-surface-variant mb-12">
+      Hands-on work across cloud infrastructure, DevOps, robotics, and full-stack development.
+    </p>
+
+    <!-- Featured card -->
+    <div
+      class="bg-primary rounded-xl overflow-hidden shadow-[0_8px_32px_rgba(26,54,93,0.18)] flex flex-col md:flex-row mb-8 border border-secondary group"
+    >
+      <!-- Accent bar -->
+      <div class="hidden md:block w-1.5 bg-secondary flex-shrink-0 rounded-l-xl"></div>
+
+      <div class="p-8 md:p-10 flex flex-col flex-grow">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="material-symbols-outlined text-secondary-fixed text-xl">star</span>
+          <span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest">Featured</span>
+        </div>
+
+        <h3 class="font-display-lg-mobile text-display-lg-mobile text-on-primary mb-2">
+          {{ featuredProject.title }}
+        </h3>
+
+        <p class="font-label-sm text-label-sm text-secondary-fixed-dim mb-4">
+          {{ featuredProject.role }}
+        </p>
+
+        <p class="font-body-lg text-body-lg text-on-primary/80 mb-8 max-w-3xl">
+          {{ featuredProject.description }}
+        </p>
+
+        <div class="flex flex-wrap gap-2 mt-auto">
+          @for (tag of featuredProject.tags; track tag) {
+            <span
+              class="px-3 py-1 bg-secondary text-on-secondary font-label-sm text-label-sm rounded-full"
+            >
+              {{ tag }}
+            </span>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Regular cards grid -->
+    <div class="grid md:grid-cols-2 gap-8">
+      @for (project of regularProjects; track project.title) {
+        <div
+          class="bg-surface rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(26,54,93,0.05)] flex flex-col group border border-transparent hover:border-secondary transition-all"
+        >
+          <div class="p-8 flex-grow">
+            <h3 class="font-headline-md text-headline-md text-primary mb-2">
+              {{ project.title }}
+            </h3>
+
+            <p class="font-label-sm text-label-sm text-secondary mb-4">
+              {{ project.role }}
+            </p>
+
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              {{ project.description }}
+            </p>
+          </div>
+
+          <div
+            class="bg-surface-container p-6 flex flex-wrap gap-2 border-t border-surface-container-highest"
+          >
+            @for (tag of project.tags; track tag) {
+              <span
+                class="px-3 py-1 bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full"
+              >
+                {{ tag }}
+              </span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+

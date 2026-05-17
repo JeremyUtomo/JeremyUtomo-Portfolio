@@ -1,0 +1,68 @@
+<header
+  class="bg-surface/90 backdrop-blur-sm shadow-sm sticky top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto"
+>
+  <div class="font-headline-md text-headline-md font-bold text-primary">
+    Jeremy Utomo
+  </div>
+
+  <nav class="hidden md:flex gap-gutter items-center">
+    <a
+      [class]="isActive('about') ? 'text-primary border-b-2 border-primary pb-1 font-label-sm text-label-sm' : 'text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm'"
+      href="#about"
+      >About</a
+    >
+    <a
+      [class]="isActive('stack') ? 'text-primary border-b-2 border-primary pb-1 font-label-sm text-label-sm' : 'text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm'"
+      href="#stack"
+      >Stack</a
+    >
+    <a
+      [class]="isActive('projects') ? 'text-primary border-b-2 border-primary pb-1 font-label-sm text-label-sm' : 'text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm'"
+      href="#projects"
+      >Projects</a
+    >
+    <a
+      [class]="isActive('contact') ? 'text-primary border-b-2 border-primary pb-1 font-label-sm text-label-sm' : 'text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm'"
+      href="#contact"
+      >Contact</a
+    >
+  </nav>
+
+  <button
+    class="md:hidden text-on-surface flex items-center"
+    (click)="toggleMobileMenu()"
+  >
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+</header>
+
+@if (mobileMenuOpen) {
+  <div
+    class="md:hidden bg-surface shadow-md flex flex-col gap-4 px-margin-mobile py-6 sticky top-[72px] z-40"
+  >
+    <a
+      [class]="isActive('about') ? 'text-primary font-label-sm text-label-sm' : 'text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm'"
+      href="#about"
+      (click)="toggleMobileMenu()"
+      >About</a
+    >
+    <a
+      [class]="isActive('stack') ? 'text-primary font-label-sm text-label-sm' : 'text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm'"
+      href="#stack"
+      (click)="toggleMobileMenu()"
+      >Stack</a
+    >
+    <a
+      [class]="isActive('projects') ? 'text-primary font-label-sm text-label-sm' : 'text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm'"
+      href="#projects"
+      (click)="toggleMobileMenu()"
+      >Projects</a
+    >
+    <a
+      class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm"
+      href="#contact"
+      (click)="toggleMobileMenu()"
+      >Contact</a
+    >
+  </div>
+}
