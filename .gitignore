@@ -1,11 +1,11 @@
 # Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+dist/
+tmp/
+out-tsc/
+bazel-out/
 
 # Node
-/node_modules
+node_modules/
 npm-debug.log
 yarn-error.log
 
@@ -22,14 +22,14 @@ yarn-error.log
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
+.history/
 
 # Misc
-/.sass-cache
-/connect.lock
-/coverage
-/.nyc_output
-/typings
+.sass-cache/
+connect.lock
+coverage/
+.nyc_output/
+typings/
 
 # System files
 .DS_Store
