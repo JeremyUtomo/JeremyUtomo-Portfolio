@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["angular:styles/component:css;b25cba3b1424b1e84649b1309f11f69af076a93fd9113b7f73897b29d43b670e;/Users/jeremyutomo/IdeaProjects/JeremyUtomo-Portfolio/frontend/src/app/components/stack/stack.component.ts"],
+  "sourcesContent": ["\n      .bar-fill {\n        width: 0%;\n        transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);\n      }\n      .bar-fill.animate {\n        width: var(--bar-width);\n      }\n    "],
+  "mappings": ";AACM,CAAC;AACC,SAAO;AACP,cAAY,MAAM,GAAG,aAAa,GAAG,EAAE,CAAC,EAAE,GAAG,EAAE;AACjD;AACA,CAJC,QAIQ,CAAC;AACR,SAAO,IAAI;AACb;",
+  "names": []
+}

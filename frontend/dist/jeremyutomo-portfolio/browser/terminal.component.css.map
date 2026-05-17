@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["angular:styles/component:css;b611fa1a34d9d5ecedad140a8d521cac656564109af2c064a158acfac8bd7c62;/Users/jeremyutomo/IdeaProjects/JeremyUtomo-Portfolio/frontend/src/app/components/terminal/terminal.component.ts"],
+  "sourcesContent": ["\n      .terminal-body {\n        min-height: 220px;\n      }\n      .typed-cursor {\n        color: #4ade80;\n        font-weight: 100;\n      }\n    "],
+  "mappings": ";AACM,CAAC;AACC,cAAY;AACd;AACA,CAAC;AACC,SAAO;AACP,eAAa;AACf;",
+  "names": []
+}
